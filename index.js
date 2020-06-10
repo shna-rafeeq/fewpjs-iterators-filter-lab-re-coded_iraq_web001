@@ -19,9 +19,18 @@
       ];
  
 function findMatching(drivers,str){
-  return drivers.filter((element)=>{
-        return  element.toLowerCase() === str.toLowerCase()
-      });
+  // return drivers.filter((element)=>{
+  //       return  element.toLowerCase() === str.toLowerCase()
+  //     });
+  let matched = drivers.filter((driver)=>{
+    if(driver === str){
+      return str;
+    }
+      if(driver === str.charAt(0).toUpperCase()+str.slice(1)){
+      return str;
+    }
+  })
+  return matched;
   }
  findMatching(drivers,"Bobby");
  
