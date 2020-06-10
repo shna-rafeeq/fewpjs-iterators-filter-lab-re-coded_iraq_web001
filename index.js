@@ -26,7 +26,7 @@ function findMatching(drivers,str){
     if(driver === str){
       return str;
     }
-      if(driver === str.charAt(0).toUpperCase()+str.slice(1)){
+      if(driver.charAt(0).toUpperCase()+str.slice(1) === str.charAt(0).toUpperCase()+str.slice(1)){
       return str;
     }
   })
